@@ -1,8 +1,18 @@
 {
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/src/index.html"
-        }
+<<<<<<< HEAD
+  "builds": [
+    { "src": "src/index.html", "use": "@vercel/static" },
+    { "src": "src/output.css", "use": "@vercel/static" }
+  ],
+  "routes": [{ "src": "/", "dest": "/src/index.html" }]
+}
+=======
+    "build" : [
+        {"src" : "src/index.html", "use" : "@vercel/static"},
+        {"src" : "src/output.css", "use" : "@vercel/static"}
+    ],
+    "routes" : [
+        {"src" : "/", "dest" : "/src/index.html"}
     ]
 }
+>>>>>>> 1f194c1ca82d33d351e3256d547d9f84b907edd5
