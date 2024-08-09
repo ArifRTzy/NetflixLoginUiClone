@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx},            "],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily : {
-        'netflix' : ['netflix sans', 'sans-serif'],
+        'netflix' : ['Netflix Sans', 'sans-serif'],
       },
     },
   },
