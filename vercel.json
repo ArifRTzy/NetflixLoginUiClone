@@ -1,0 +1,30 @@
+{
+  "builds": [
+    {
+      "src": "src/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "dist/output.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/Netflix-Logo.wine.svg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/netflixBG.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/netflixLogo.webp",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/src/index.html"
+    }
+  ]
+}
