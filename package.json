@@ -6,7 +6,8 @@
     "tailwindcss": "^3.4.9"
   },
   "scripts": {
-    "build": "postcss src/input.css -o dist/output.css",
+    "build": "tailwindcss -i src/input.css -o dist/output.css",
+    "build:watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "start": "npm run build"
   },
   "name": "netflixloginuiclone",
