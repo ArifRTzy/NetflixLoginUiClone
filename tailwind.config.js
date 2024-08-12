@@ -6,6 +6,11 @@ module.exports = {
       fontFamily : {
         'netflix' : ['Netflix Sans', 'sans-serif'],
       },
+      colors : {
+        'fff' : '#fff',
+        'drwh' : '#B8B7B7',
+        'border' : '#EB3942',
+      },
     },
   },
   plugins: [],
