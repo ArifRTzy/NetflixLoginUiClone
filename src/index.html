@@ -23,11 +23,15 @@
                             <h2 class="text-fff text-[2rem] font-semibold mb-6">Sign In</h2>
                         </header>
                         <form action="">
-                            <div class="border-border border-[1px] rounded h-14">
-                                <div class="w-[280px] h-full m-auto space-y-0 flex justify-center flex-col items-center">
-                                    <label class="text-drwh text-[12px] w-full" for="email">Email atau nomor ponsel</label>
-                                    <input class="h-4 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full" type="text" name="email" id="password ">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text" id="border-clicked">
+                                <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text">
+                                    <label class="text-drwh text-base w-full cursor-text " for="email" id="lbl-email">Email or mobile number</label>
+                                    <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="email" id="in-email">
                                 </div>
+                            </div>
+                            <div class="hidden mt-[6px] items-center" id="warning1">
+                                <img class="" src="/assets/x.svg" alt="">
+                                <p class="text-[#EB3942] text-[13px] ml-1 mt-[2px]">Please enter a valid email or phone number.</p>
                             </div>
                             <div>
                                 <label class="text-drwh" for="password">Password</label>
@@ -54,5 +58,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="script.js"></script>
 </body>
 </html>

@@ -607,6 +607,70 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[7px\] {
+  margin-top: 7px;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mt-\[2px\] {
+  margin-top: 2px;
+}
+
+.mt-\[6px\] {
+  margin-top: 6px;
+}
+
+.mt-\[1px\] {
+  margin-top: 1px;
+}
+
+.mt-\[-1px\] {
+  margin-top: -1px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-\[1px\] {
+  margin-bottom: 1px;
+}
+
+.mb-\[0\.4px\] {
+  margin-bottom: 0.4px;
+}
+
+.mb-\[px\] {
+  margin-bottom: px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
+.-mt-3 {
+  margin-top: -0.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -615,8 +679,16 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-14 {
   height: 3.5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-\[131\.58vh\] {
@@ -631,16 +703,40 @@ video {
   height: 100%;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-4 {
   height: 1rem;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[18px\] {
+  height: 18px;
+}
+
+.h-\[16px\] {
+  height: 16px;
+}
+
+.h-\[17px\] {
+  height: 17px;
 }
 
 .w-48 {
   width: 12rem;
 }
 
-.w-\[280px\] {
-  width: 280px;
+.w-\[282px\] {
+  width: 282px;
 }
 
 .w-\[315px\] {
@@ -655,6 +751,10 @@ video {
   width: 100%;
 }
 
+.cursor-text {
+  cursor: text;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -667,16 +767,34 @@ video {
   justify-content: center;
 }
 
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+.space-y-\[1\.5px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  margin-top: calc(1.5px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5px * var(--tw-space-y-reverse));
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+.space-y-\[1\.6px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  margin-top: calc(1.6px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.6px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.2px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.2px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.2px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.6px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.6px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.6px * var(--tw-space-y-reverse));
 }
 
 .rounded {
@@ -709,6 +827,11 @@ video {
   background-color: transparent;
 }
 
+.bg-fff {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -727,8 +850,22 @@ video {
   font-family: Netflix Sans, sans-serif;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .text-\[2rem\] {
   font-size: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xs {
@@ -736,12 +873,8 @@ video {
   line-height: 1rem;
 }
 
-.text-\[10px\] {
-  font-size: 10px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
+.text-\[13px\] {
+  font-size: 13px;
 }
 
 .font-\[550\] {
@@ -771,6 +904,15 @@ video {
   color: ;
 }
 
+.text-\[\#EB3942\] {
+  --tw-text-opacity: 1;
+  color: rgb(235 57 66 / var(--tw-text-opacity));
+}
+
+.text-\[sm\] {
+  color: sm;
+}
+
 .caret-white {
   caret-color: #fff;
 }
@@ -782,6 +924,22 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.outline-2 {
+  outline-width: 2px;
+}
+
+.outline-offset-2 {
+  outline-offset: 2px;
+}
+
+.outline-fff {
+  outline-color: #fff;
 }
 
 .focus\:border-none:focus {

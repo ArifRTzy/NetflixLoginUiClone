@@ -9,15 +9,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "assets/Netflix-Logo.wine.svg",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/netflixBG.jpg",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/netflixLogo.webp",
+      "src": "assets/**/*",
       "use": "@vercel/static"
     }
   ],
