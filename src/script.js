@@ -10,6 +10,7 @@ const password = document.getElementById("password");
 const warning3 = document.getElementById("warning3");
 const showPassword = document.getElementById("eye-button");
 const eyeImg = document.getElementById("eye-img");
+const remember = document.getElementById("remember")
 import validator from "https://cdn.skypack.dev/validator";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState({}, document.title, newUrl);
     }
 }
+
+
   borderClicked.addEventListener("click", () => {
     eyeImg.addEventListener("click", () => {
       if (eyeImg.src.endsWith("/assets/eye.svg")) {
@@ -83,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
   passwordClicked.addEventListener("click", () => {
     event.preventDefault();
     const eyeOn = new Image();
@@ -130,4 +135,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+  remember.addEventListener("click",()=>{
+    if(remember.classList.contains("bg-white")){
+      remember.classList.remove("bg-white")
+      remember.classList.add("bg-black")
+      remember.classList.remove("hover:bg-[#BCB7B5]")
+      remember.classList.add("border","hover:border-white","border-[#5A5A5A]")
+    }else{
+      remember.classList.remove("bg-black")
+      remember.classList.add("bg-white")
+      remember.classList.add("hover:bg-[#BCB7B5]")
+      remember.classList.remove("hover:border","hover:border-white")
+    }
+  })
 });

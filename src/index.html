@@ -23,7 +23,7 @@
                             <h2 class="text-fff text-[2rem] font-semibold mb-6">Sign In</h2>
                         </header>
                         <form action="">
-                            <div class="border-border border-[1px] rounded h-14 cursor-text" id="border-clicked">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text bg-[#0F0F0F] bg-opacity-70" id="border-clicked">
                                 <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text">
                                     <label class="text-drwh text-base w-full cursor-text " for="email" id="lbl-email">Email or mobile number</label>
                                     <div class="flex w-full">
@@ -45,7 +45,7 @@
                                 <img class="" src="/assets/x.svg" alt="">
                                 <p class="text-[#EB3942] text-[13px] ml-1 mt-[2px]">Please enter a valid email.</p>
                             </div>
-                            <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex items-center" id="password-clicked">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex items-center bg-[#0F0F0F] bg-opacity-70" id="password-clicked">
                                 <div class="w-[82%] h-full ml-4 space-y-[1.5px] flex justify-center flex-col items-center cursor-text ">
                                     <label class="text-drwh text-base w-full cursor-text " for="password" id="lbl-password">Password</label>
                                     <div class="flex w-full">
@@ -63,23 +63,47 @@
                             <div class="flex justify-center mt-3.5 mb-3.5 w-full">
                                 <p class="text-[#B6B4B5]">OR</p>
                             </div>
-                            <button class="bg-white w-full h-10 text-white rounded bg-opacity-[0.18] hover:bg-opacity-[0.13] transition duration-200 ease-in-out">Use a Sign-In Code</button>
+                            <button class="bg-white w-full h-10 text-white rounded bg-opacity-[0.20] hover:bg-opacity-[0.13] transition duration-200 ease-in-out">Use a Sign-In Code</button>
                             <div class="w-full flex justify-center mt-3.5">
                                 <p class="text-white cursor-pointer hover:underline hover:text-[#B8B9B6]">Forgot password?</p>
                             </div>
                         </form>
                         <footer>
-                            <div class="">
-                                <button></button>
-                                <p>Remember me</p>
+                            <div class="flex w-full mt-[18px] items-center">
+                                <button id="remember" class="bg-white rounded-sm flex justify-center items-center h-[18px] w-[19px] hover:bg-[#BCB7B5]"><img src="/assets/checklist.svg" class=""></button>
+                                <p class="text-white ml-[11.5px]">Remember me</p>
                             </div>
-                            <p>New to Netflix? <span>Sign up now.</span></p>
-                            <p class="">This page is protected by Google reCAPTCHA to ensure you're not a bot.<span>Learn more.</span></p>
+                            <p class="text-[#BBBBB5] mt-3.5">New to Netflix? <span class="text-white cursor-pointer hover:underline">Sign up now.</span></p>
+                            <p class="text-[#8C8C8C] mt-[22px] leading-tight text-[13px]">This page is protected by Google reCAPTCHA to ensure you're not a bot.<span class="text-[#0071EB] hover:underline cursor-pointer"> Learn more.</span></p>
                         </footer>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <footer class="bg-black w-full absolute top-[100vh] h-[60.7vh]">
+            <div class="mt-[205px] w-[77%] m-auto">
+                <div class="">
+                    <p class="text-[#B3B3B3]">Questions? Call <span class="hover:underline cursor-pointer">007-803-321-2130</span></p>
+                </div>
+                <div class="flex flex-wrap w-full">
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">FAQ</p></div>
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Help Center</p></div>
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Terms of Use</p></div>
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Privacy</p></div>
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Cookie Preferences</p></div>
+                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Corporate Information</p></div>
+                </div>
+                <div class="mt-7">
+                    <select name="" id="">
+                        <option value="">English</option>
+                        <option value="">Bahasa Indonesia</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+
 
         <script type="module" src="script.js"></script>
 </body>
