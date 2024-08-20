@@ -22,17 +22,19 @@
                         <header>
                             <h2 class="text-fff text-[2rem] font-semibold mb-6">Sign In</h2>
                         </header>
-                        <form action="">
+                        <form action="" class="">
                             <div class="border-border border-[1px] rounded h-14 cursor-text" id="border-clicked">
                                 <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text">
                                     <label class="text-drwh text-base w-full cursor-text " for="email" id="lbl-email">Email or mobile number</label>
-                                    <select name="number" id="number">
-                                        <option value="id">hh</option>  
-                                        <option value="id">hh</option>  
-                                        <option value="id">hh</option>  
-                                        <option value="id">hh</option>  
-                                    </select>
-                                    <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="email" id="in-email">
+                                    <div class="flex w-full">
+                                        <select class="bg-transparent text-white hidden" name="number" id="number">
+                                            <option value="id" class="">hh</option>  
+                                            <option value="id" class="">hah</option>  
+                                            <option value="id" class="">hh</option>  
+                                            <option value="id" class="">hh</option>  
+                                        </select>
+                                        <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="email" id="in-email">
+                                    </div>
                                 </div>
                             </div>
                             <div class="hidden mt-[6px] items-center" id="warning1">
@@ -43,9 +45,19 @@
                                 <img class="" src="/assets/x.svg" alt="">
                                 <p class="text-[#EB3942] text-[13px] ml-1 mt-[2px]">Please enter a valid email.</p>
                             </div>
-                            <div>
-                                <label class="text-drwh" for="password">Password</label>
-                                <input class="bg-transparent" type="text" name="password" id="password">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex" id="password-clicked">
+                                <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text w-5/6">
+                                    <label class="text-drwh text-base w-full cursor-text " for="password" id="lbl-password">Password</label>
+                                    <div class="flex w-full">
+                                        <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="password" id="password">
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="/assets/eye.svg" class="w-4">
+                                </button>
+                            </div>
+                            <div class="hidden mt-[6px] " id="warning3">
+                                <p class="text-[#EB3942] text-[13px] mt-[2px] inline-block"><img class="inline-block mr-1 mt-[-3px]" src="/assets/x.svg" alt="">Your password must contain between 4 and 60 characters.</p>
                             </div>
                             <button>Sign In</button>
                             <div class="">
