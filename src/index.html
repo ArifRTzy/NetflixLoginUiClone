@@ -22,7 +22,7 @@
                         <header>
                             <h2 class="text-fff text-[2rem] font-semibold mb-6">Sign In</h2>
                         </header>
-                        <form action="" class="">
+                        <form action="">
                             <div class="border-border border-[1px] rounded h-14 cursor-text" id="border-clicked">
                                 <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text">
                                     <label class="text-drwh text-base w-full cursor-text " for="email" id="lbl-email">Email or mobile number</label>
@@ -45,27 +45,27 @@
                                 <img class="" src="/assets/x.svg" alt="">
                                 <p class="text-[#EB3942] text-[13px] ml-1 mt-[2px]">Please enter a valid email.</p>
                             </div>
-                            <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex" id="password-clicked">
-                                <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text w-5/6">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex items-center" id="password-clicked">
+                                <div class="w-[82%] h-full ml-4 space-y-[1.5px] flex justify-center flex-col items-center cursor-text ">
                                     <label class="text-drwh text-base w-full cursor-text " for="password" id="lbl-password">Password</label>
                                     <div class="flex w-full">
                                         <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="password" id="password">
                                     </div>
                                 </div>
-                                <button>
-                                    <img src="/assets/eye.svg" class="w-4">
+                                <button id="eye-button" class="rounded-full  w-8 h-8 hover:bg-[#3D3D3B] justify-center items-center hidden">
+                                    <img id="eye-img" src="/assets/eye.svg" class="w-4 ">
                                 </button>
                             </div>
                             <div class="hidden mt-[6px] " id="warning3">
                                 <p class="text-[#EB3942] text-[13px] mt-[2px] inline-block"><img class="inline-block mr-1 mt-[-3px]" src="/assets/x.svg" alt="">Your password must contain between 4 and 60 characters.</p>
                             </div>
-                            <button>Sign In</button>
-                            <div class="">
-                                <p>OR</p>
+                            <button class="bg-[#E50914] w-full text-white h-10 mt-4 hover:bg-[#C01119] rounded transition duration-200 ease-in-out">Sign In</button>
+                            <div class="flex justify-center mt-3.5 mb-3.5 w-full">
+                                <p class="text-[#B6B4B5]">OR</p>
                             </div>
-                            <button>Use a Sign-In Code</button>
-                            <div class="">
-                                <p class="">Forgpt password?</p>
+                            <button class="bg-white w-full h-10 text-white rounded bg-opacity-[0.18] hover:bg-opacity-[0.13] transition duration-200 ease-in-out">Use a Sign-In Code</button>
+                            <div class="w-full flex justify-center mt-3.5">
+                                <p class="text-white cursor-pointer hover:underline hover:text-[#B8B9B6]">Forgot password?</p>
                             </div>
                         </form>
                         <footer>

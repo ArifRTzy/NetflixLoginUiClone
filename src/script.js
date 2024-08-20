@@ -7,11 +7,28 @@ const number = document.getElementById("number");
 const passwordClicked = document.getElementById("password-clicked");
 const passwordLabel = document.getElementById("lbl-password");
 const password = document.getElementById("password");
-const warning3 = document.getElementById("warning3")
+const warning3 = document.getElementById("warning3");
+const showPassword = document.getElementById("eye-button");
+const eyeImg = document.getElementById("eye-img");
 import validator from "https://cdn.skypack.dev/validator";
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.onload = function() {
+    // Check if there is a query string in the URL
+    if (window.location.search) {
+        // Use the history API to update the URL without reloading the page
+        var newUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+    }
+}
   borderClicked.addEventListener("click", () => {
+    eyeImg.addEventListener("click", () => {
+      if (eyeImg.src.endsWith("/assets/eye.svg")) {
+        eyeImg.src = "/assets/eye-off.svg";
+      } else {
+        eyeImg.src = "/assets/eye.svg";
+      }
+    });
     borderClicked.classList.add(
       "outline-2",
       "outline-fff",
@@ -67,6 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   passwordClicked.addEventListener("click", () => {
+    event.preventDefault();
+    const eyeOn = new Image();
+    eyeOn.src = "/assets/eye.svg";
+    const eyeOff = new Image();
+    eyeOff.src = "/assets/eye-off.svg";
+    showPassword.addEventListener("click", () => {
+      if (eyeImg.src.endsWith("/assets/eye.svg")) {
+        eyeImg.src = eyeOff.src;
+        password.type = "password";
+      } else {
+        eyeImg.src = eyeOn.src;
+        password.type = "text";
+      }
+    });
     passwordClicked.classList.add(
       "outline-2",
       "outline-fff",
@@ -75,6 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     password.classList.remove("hidden");
     password.focus();
+    showPassword.classList.remove("hidden");
+    showPassword.classList.add("flex");
     passwordLabel.classList.remove("text-base");
     passwordLabel.classList.add("text-[12px]");
     passwordLabel.classList.add("font-medium");
@@ -86,12 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
           "outline",
           "outline-offset-2"
         );
-        password.classList.add("hidden");
-        passwordLabel.classList.remove("text-[12px]");
-        passwordLabel.classList.add("text-base");
-        if(password.value === ""){
-          warning3.classList.remove("hidden")
-          warning3.classList.add("flex")
+        showPassword.classList.remove("flex");
+        showPassword.classList.add("hidden");
+        if (password.value === "") {
+          warning3.classList.remove("hidden");
+          warning3.classList.add("flex");
+          passwordLabel.classList.remove("text-[12px]");
+          passwordLabel.classList.add("text-base");
         }
       }
     });
