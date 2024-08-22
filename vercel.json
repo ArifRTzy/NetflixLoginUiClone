@@ -5,6 +5,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "src/script.js",
+      "use": "@vercel/static"
+    },
+    {
       "src": "dist/output.css",
       "use": "@vercel/static"
     },
