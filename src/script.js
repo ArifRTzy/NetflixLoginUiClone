@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     warning1.classList.remove("flex");
     warning1.classList.add("hidden");
 
-    document.addEventListener("click", () => {
+    document.addEventListener("click", (event) => {
       if (
         !borderClicked.contains(event.target) &&
         !inputEmail.contains(event.target) &&
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     passwordLabel.classList.remove("text-base");
     passwordLabel.classList.add("text-[12px]");
     passwordLabel.classList.add("font-medium");
-    document.addEventListener("click", () => {
+    document.addEventListener("click", (event) => {
       if (!passwordClicked.contains(event.target)) {
         passwordClicked.classList.remove(
           "outline-2",
