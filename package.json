@@ -10,6 +10,7 @@
     "build:watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "start": "npm run build"
   },
+  "type": "module",
   "name": "netflixloginuiclone",
   "version": "1.0.0",
   "description": "netfix login ui clone",
