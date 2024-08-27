@@ -5,12 +5,19 @@ module.exports = {
     extend: {
       fontFamily : {
         'netflix' : ['Netflix Sans', 'sans-serif'],
+        'arial' : ['Arial',"serif"]
       },
       colors : {
         'fff' : '#fff',
         'drwh' : '#B8B7B7',
         'border' : '#EB3942',
       },
+      screens:{
+        'xs' : {'max':'600px'},
+        'lgmax' : {'max' : '960px'},
+        '2xmax' : {'max' : '1536px','min' : '600px'},
+        'xlmax' : {'max' : '1280px'}
+      }
     },
   },
   plugins: [],

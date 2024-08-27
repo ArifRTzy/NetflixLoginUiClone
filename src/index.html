@@ -6,33 +6,38 @@
     <title>Netflix</title>
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="shortcut icon" href="/assets/netflixLogo.webp" type="image/x-icon">
+
 </head>
 <body class="box-border p-0 m-0 font-netflix">
         <div class="relative">
             <img src="/assets/netflixBG.jpg" class="object-cover object-left-top w-full h-[131.58vh]">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 bg-black opacity-50 xs:opacity-100"></div>
             
             <header class="w-full">
-                <img src="/assets/Netflix-Logo.wine.svg" class="absolute z-10 w-48 left-[152.3px] -top-5 ">
+                <img src="/assets/Netflix-Logo.wine.svg" class="absolute z-20 w-48 xl:left-[152.3px] -top-5 lg:left-5 lgmax:w-32 lgmax:-top-1 lgmax:left-5 xs:left-1">
             </header>
 
-            <div class="flex justify-center z-10 absolute inset-x-0 top-[92px]"">
-                <div class="bg-black/70 w-[450px] h-[650px] rounded flex justify-center">
-                    <div class="w-[315px] mt-[2.8rem]">
+            <div class="flex justify-center z-10 absolute inset-x-0 top-[92px] xs:top-[28px]">
+                <div class="bg-black/70 w-[450px] h-[650px] rounded flex justify-center xs:w-full xs:ml-[1.6rem] xs:mr-[1.6rem]">
+                    <div class="w-[315px] mt-[2.8rem] xs:w-full">
                         <header>
                             <h2 class="text-fff text-[2rem] font-semibold mb-6">Sign In</h2>
                         </header>
                         <form action="">
-                            <div class="border-border border-[1px] rounded h-14 cursor-text bg-[#0F0F0F] bg-opacity-70" id="border-clicked">
-                                <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text">
+                            <div class="border-border border-[1px] rounded h-14 cursor-text bg-[#0F0F0F] bg-opacity-70 " id="border-clicked">
+                                <div class="w-[282px] h-full m-auto space-y-[1.5px] flex justify-center flex-col items-center cursor-text xs:w-full xs:ml-[1rem] xs:mr-[1rem]">
                                     <label class="text-drwh text-base w-full cursor-text " for="email" id="lbl-email">Email or mobile number</label>
-                                    <div class="flex w-full">
-                                        <select class="bg-transparent text-white hidden" name="number" id="number">
-                                            <option value="id" class="">hh</option>  
-                                            <option value="id" class="">hah</option>  
-                                            <option value="id" class="">hh</option>  
-                                            <option value="id" class="">hh</option>  
-                                        </select>
+                                    <div class="flex w-full relative leading-none">
+                                        <div class="hidden absolute" id="number">
+                                            <select class="bg-transparent text-white appearance-none whitespace-nowrap w-[84px] opacity-0 font-arial" name="number" id="select">
+                                                <option value="AF">Afganistan +93</option><option value="ZA">Afrika Selatan +27</option><option value="AL">Albania +355</option><option value="DZ">Aljazair +213</option><option value="US">Amerika Serikat +1</option><option value="AD">Andorra +376</option><option value="AO">Angola +244</option><option value="AI">Anguilla +1</option><option value="AQ">Antarktika +672</option><option value="AG">Antigua dan Barbuda +1</option><option value="SA">Arab Saudi +966</option><option value="AR">Argentina +54</option><option value="AM">Armenia +374</option><option value="AW">Aruba +297</option><option value="AU">Australia +61</option><option value="AT">Austria +43</option><option value="AZ">Azerbaijan +994</option><option value="BS">Bahama +1</option><option value="BH">Bahrain +973</option><option value="BD">Bangladesh +880</option><option value="BB">Barbados +1</option><option value="NL">Belanda +31</option><option value="BQ">Belanda Karibia +599</option><option value="BY">Belarus +375</option><option value="BE">Belgia +32</option><option value="BZ">Belize +501</option><option value="BJ">Benin +229</option><option value="BM">Bermuda +1</option><option value="BT">Bhutan +975</option><option value="BO">Bolivia +591</option><option value="BA">Bosnia dan Herzegovina +387</option><option value="BW">Botswana +267</option><option value="BR">Brasil +55</option><option value="BN">Brunei +673</option><option value="BG">Bulgaria +359</option><option value="BF">Burkina Faso +226</option><option value="BI">Burundi +257</option><option value="CZ">Ceko +420</option><option value="TD">Chad +235</option><option value="CL">Cile +56</option><option value="CI">Côte d’Ivoire +225</option><option value="AN">Curaçao +599</option><option value="CW">Curaçao +599</option><option value="DK">Denmark +45</option><option value="DM">Dominika +1</option><option value="EC">Ekuador +593</option><option value="SV">El Salvador +503</option><option value="ER">Eritrea +291</option><option value="EE">Estonia +372</option><option value="SZ">eSwatini +268</option><option value="ET">Etiopia +251</option><option value="FJ">Fiji +679</option><option value="PH">Filipina +63</option><option value="FI">Finlandia +358</option><option value="GA">Gabon +241</option><option value="GM">Gambia +220</option><option value="GE">Georgia +995</option><option value="GS">Georgia Selatan &amp; Kep. Sandwich Selatan +500</option><option value="GH">Ghana +233</option><option value="GI">Gibraltar +350</option><option value="GL">Greenland +299</option><option value="GD">Grenada +1</option><option value="GP">Guadeloupe +590</option><option value="GU">Guam +1</option><option value="GT">Guatemala +502</option><option value="GG">Guernsey +44</option><option value="GN">Guinea +224</option><option value="GW">Guinea-Bissau +245</option><option value="GQ">Guinea Ekuatorial +240</option><option value="GY">Guyana +592</option><option value="GF">Guyana Prancis +594</option><option value="HT">Haiti +509</option><option value="HN">Honduras +504</option><option value="HK">Hong Kong DAK Tiongkok +852</option><option value="HU">Hungaria +36</option><option value="IN">India +91</option><option value="ID">Indonesia +62</option><option value="GB">Inggris Raya +44</option><option value="IQ">Irak +964</option><option value="IR">Iran +98</option><option value="IE">Irlandia +353</option><option value="IS">Islandia +354</option><option value="IL">Israel +972</option><option value="IT">Italia +39</option><option value="JM">Jamaika +1</option><option value="JP">Jepang +81</option><option value="DE">Jerman +49</option><option value="JE">Jersey +44</option><option value="DJ">Jibuti +253</option><option value="NC">Kaledonia Baru +687</option><option value="KH">Kamboja +855</option><option value="CM">Kamerun +237</option><option value="CA">Kanada +1</option><option value="KZ">Kazakhstan +7</option><option value="KE">Kenya +254</option><option value="AX">Kepulauan Aland +358</option><option value="KY">Kepulauan Cayman +1</option><option value="CC">Kepulauan Cocos (Keeling) +61</option><option value="CK">Kepulauan Cook +682</option><option value="FK">Kepulauan Falkland +500</option><option value="FO">Kepulauan Faroe +298</option><option value="MP">Kepulauan Mariana Utara +1</option><option value="MH">Kepulauan Marshall +692</option><option value="NF">Kepulauan Norfolk +672</option><option value="PN">Kepulauan Pitcairn +64</option><option value="SB">Kepulauan Solomon +677</option><option value="SJ">Kepulauan Svalbard dan Jan Mayen +47</option><option value="UM">Kepulauan Terluar AS +1</option><option value="TC">Kepulauan Turks dan Caicos +1</option><option value="VI">Kepulauan Virgin Amerika Serikat +1</option><option value="VG">Kepulauan Virgin Britania Raya +1</option><option value="WF">Kepulauan Wallis dan Futuna +681</option><option value="KG">Kirgizstan +996</option><option value="KI">Kiribati +686</option><option value="CO">Kolombia +57</option><option value="KM">Komoro +269</option><option value="CG">Kongo - Brazzaville +242</option><option value="CD">Kongo - Kinshasa +243</option><option value="KR">Korea Selatan +82</option><option value="KP">Korea Utara +850</option><option value="XK">Kosovo +383</option><option value="CR">Kosta Rika +506</option><option value="HR">Kroasia +385</option><option value="CU">Kuba +53</option><option value="KW">Kuwait +965</option><option value="LA">Laos +856</option><option value="LV">Latvia +371</option><option value="LB">Lebanon +961</option><option value="LS">Lesotho +266</option><option value="LR">Liberia +231</option><option value="LY">Libya +218</option><option value="LI">Liechtenstein +423</option><option value="LT">Lituania +370</option><option value="LU">Luksemburg +352</option><option value="MG">Madagaskar +261</option><option value="MO">Makau DAK Tiongkok +853</option><option value="MK">Makedonia Utara +389</option><option value="MV">Maladewa +960</option><option value="MW">Malawi +265</option><option value="MY">Malaysia +60</option><option value="ML">Mali +223</option><option value="MT">Malta +356</option><option value="MA">Maroko +212</option><option value="MQ">Martinik +596</option><option value="MR">Mauritania +222</option><option value="MU">Mauritius +230</option><option value="YT">Mayotte +262</option><option value="MX">Meksiko +52</option><option value="EG">Mesir +20</option><option value="FM">Mikronesia +691</option><option value="MD">Moldova +373</option><option value="MC">Monako +377</option><option value="MN">Mongolia +976</option><option value="ME">Montenegro +382</option><option value="MS">Montserrat +1</option><option value="MZ">Mozambik +258</option><option value="MM">Myanmar (Burma) +95</option><option value="NA">Namibia +264</option><option value="NR">Nauru +674</option><option value="NP">Nepal +977</option><option value="NE">Niger +227</option><option value="NG">Nigeria +234</option><option value="NI">Nikaragua +505</option><option value="NU">Niue +683</option><option value="NO">Norwegia +47</option><option value="OM">Oman +968</option><option value="PK">Pakistan +92</option><option value="PW">Palau +680</option><option value="PA">Panama +507</option><option value="PG">Papua Nugini +675</option><option value="PY">Paraguay +595</option><option value="PE">Peru +51</option><option value="PL">Polandia +48</option><option value="PF">Polinesia Prancis +689</option><option value="PT">Portugal +351</option><option value="FR">Prancis +33</option><option value="PR">Puerto Riko +1</option><option value="BV">Pulau Bouvet +47</option><option value="HM">Pulau Heard dan Kepulauan McDonald +672</option><option value="IM">Pulau Man +44</option><option value="CX">Pulau Natal +61</option><option value="QA">Qatar +974</option><option value="CF">Republik Afrika Tengah +236</option><option value="DO">Republik Dominika +1</option><option value="RE">Réunion +262</option><option value="RO">Rumania +40</option><option value="RU">Rusia +7</option><option value="RW">Rwanda +250</option><option value="EH">Sahara Barat +212</option><option value="BL">Saint Barthélemy +590</option><option value="SH">Saint Helena +290</option><option value="KN">Saint Kitts dan Nevis +1</option><option value="LC">Saint Lucia +1</option><option value="MF">Saint Martin +590</option><option value="PM">Saint Pierre dan Miquelon +508</option><option value="VC">Saint Vincent dan Grenadine +1</option><option value="WS">Samoa +685</option><option value="AS">Samoa Amerika +1</option><option value="SM">San Marino +378</option><option value="ST">Sao Tome dan Principe +239</option><option value="NZ">Selandia Baru +64</option><option value="SN">Senegal +221</option><option value="RS">Serbia +381</option><option value="SC">Seychelles +248</option><option value="SL">Sierra Leone +232</option><option value="SG">Singapura +65</option><option value="SX">Sint Maarten +1</option><option value="CY">Siprus +357</option><option value="SK">Slovakia +421</option><option value="SI">Slovenia +386</option><option value="SO">Somalia +252</option><option value="ES">Spanyol +34</option><option value="LK">Sri Lanka +94</option><option value="SD">Sudan +249</option><option value="SS">Sudan Selatan +211</option><option value="SY">Suriah +963</option><option value="SR">Suriname +597</option><option value="SE">Swedia +46</option><option value="CH">Swiss +41</option><option value="TW">Taiwan +886</option><option value="TJ">Tajikistan +992</option><option value="CV">Tanjung Verde +238</option><option value="TZ">Tanzania +255</option><option value="TH">Thailand +66</option><option value="TL">Timor Leste +670</option><option value="CN">Tiongkok +86</option><option value="TG">Togo +228</option><option value="TK">Tokelau +690</option><option value="TO">Tonga +676</option><option value="TT">Trinidad dan Tobago +1</option><option value="TN">Tunisia +216</option><option value="TR">Turki +90</option><option value="TM">Turkmenistan +993</option><option value="TV">Tuvalu +688</option><option value="UG">Uganda +256</option><option value="UA">Ukraina +380</option><option value="AE">Uni Emirat Arab +971</option><option value="UY">Uruguay +598</option><option value="UZ">Uzbekistan +998</option><option value="VU">Vanuatu +678</option><option value="VA">Vatikan +379</option><option value="VE">Venezuela +58</option><option value="VN">Vietnam +84</option><option value="IO">Wilayah Inggris di Samudra Hindia +246</option><option value="PS">Wilayah Palestina +970</option><option value="TF">Wilayah Selatan Prancis +262</option><option value="YE">Yaman +967</option><option value="JO">Yordania +962</option><option value="GR">Yunani +30</option><option value="ZM">Zambia +260</option><option value="ZW">Zimbabwe +263</option>
+                                            </select>
+                                        </div>
+                                        <div id="numberButton" class="hidden min-w-[84px] h-[22px] rounded justify-between items-center mr-4">
+                                            <span id="dropdownValue" class="text-white font-arial text-xs font-semibold pl-[2px]"></span>
+                                            <p class="text-white" id="countryNumber"></p>
+                                            <img src="/assets/dropdown.svg">
+                                        </div>
                                         <input class="h-5 font-[550] bg-transparent border-none outline-none focus:outline-none focus:border-none caret-white text-white w-full hidden" type="text" name="email" id="in-email">
                                     </div>
                                 </div>
@@ -44,6 +49,9 @@
                             <div class="hidden mt-[6px] items-center" id="warning2">
                                 <img class="" src="/assets/x.svg" alt="">
                                 <p class="text-[#EB3942] text-[13px] ml-1 mt-[2px]">Please enter a valid email.</p>
+                            </div>
+                            <div class="hidden mt-[6px] " id="warning4">
+                                <p class="text-[#EB3942] text-[13px] mt-[2px] inline-block"><img class="inline-block mr-1 mt-[-3px]" src="/assets/x.svg" alt="">Please enter a valid phone number..</p>
                             </div>
                             <div class="border-border border-[1px] rounded h-14 cursor-text mt-4 flex items-center bg-[#0F0F0F] bg-opacity-70" id="password-clicked">
                                 <div class="w-[82%] h-full ml-4 space-y-[1.5px] flex justify-center flex-col items-center cursor-text ">
@@ -82,29 +90,36 @@
         </div>
 
 
-        <footer class="bg-black w-full absolute top-[100vh] h-[60.7vh]">
-            <div class="mt-[205px] w-[77%] m-auto">
+        <footer class="bg-black w-full absolute top-[100vh] h-[60.7vh] 2xmax:h-[32vh] xs:top-[80vh] xs:border-t-solid xs:border-t-[#5E5E5E] xs:border-t-[1px]">
+            <div class="mt-[205px] w-[77%] m-auto 2xmax:mt-[60px] xlmax:w-[95%] xs:ml-[1.7rem] xs:mt-[10px]">
                 <div class="">
                     <p class="text-[#B3B3B3]">Questions? Call <span class="hover:underline cursor-pointer">007-803-321-2130</span></p>
                 </div>
                 <div class="flex flex-wrap w-full">
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">FAQ</p></div>
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Help Center</p></div>
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Terms of Use</p></div>
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Privacy</p></div>
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Cookie Preferences</p></div>
-                    <div class="w-1/4 mt-5"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Corporate Information</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2 "><p class="text-[#B3B3B3] text-sm underline cursor-pointer">FAQ</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Help Center</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Terms of Use</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Privacy</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Cookie Preferences</p></div>
+                    <div class="w-1/4 mt-5 lgmax:w-1/2"><p class="text-[#B3B3B3] text-sm underline cursor-pointer">Corporate Information</p></div>
                 </div>
-                <div class="mt-7">
-                    <select name="" id="">
-                        <option value="">English</option>
-                        <option value="">Bahasa Indonesia</option>
-                    </select>
+                <div class="relative">
+                        <select name="" id="langChoose" class="absolute w-[200px] h-8 opacity-0 px-8 appearance-none" >
+                            <option value="">English</option>
+                            <option value="">Bahasa Indonesia</option>
+                        </select>
+                    <div class="flex mt-7 bg-[#0F0F0F] w-[200px] h-8 rounded border-solid border-[1px] items-center border-[#5E5E5E] justify-between">
+                        <div class="flex ml-3">
+                            <img class="" src="/assets/lang.svg">
+                            <p id="lang" class="text-white ml-1"></p>
+                        </div>
+                        <img class="mr-3" src="/assets/dropdown.svg">
+                    </div>
                 </div>
             </div>
         </footer>
 
-
+      
         <script type="module" src="/src/script.js"></script>
 </body>
 </html>

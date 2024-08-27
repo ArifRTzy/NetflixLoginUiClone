@@ -10,28 +10,26 @@ const password = document.getElementById("password");
 const warning3 = document.getElementById("warning3");
 const showPassword = document.getElementById("eye-button");
 const eyeImg = document.getElementById("eye-img");
-const remember = document.getElementById("remember")
+const remember = document.getElementById("remember");
+const warning4 = document.getElementById("warning4");
+const select = document.getElementById("select");
+const selectValued = document.getElementById("dropdownValue");
+const countryNumber = document.getElementById("countryNumber");
+const numberButton = document.getElementById("numberButton");
+const opsi = document.querySelectorAll("option");
+const lang = document.getElementById("lang");
+const langChoose = document.getElementById("langChoose");
 import validator from "https://cdn.skypack.dev/validator";
 
 document.addEventListener("DOMContentLoaded", () => {
-  window.onload = function() {
-    // Check if there is a query string in the URL
+  window.onload = function () {
     if (window.location.search) {
-        // Use the history API to update the URL without reloading the page
-        var newUrl = window.location.origin + window.location.pathname;
-        window.history.replaceState({}, document.title, newUrl);
+      var newUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, newUrl);
     }
-}
+  };
 
-
-  borderClicked.addEventListener("click", () => {
-    eyeImg.addEventListener("click", () => {
-      if (eyeImg.src.endsWith("/assets/eye.svg")) {
-        eyeImg.src = "/assets/eye-off.svg";
-      } else {
-        eyeImg.src = "/assets/eye.svg";
-      }
-    });
+  borderClicked.addEventListener("click", (event) => {
     borderClicked.classList.add(
       "outline-2",
       "outline-fff",
@@ -39,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "outline-offset-2"
     );
     inputEmail.classList.remove("hidden");
-    number.classList.remove("hidden");
     inputEmail.focus();
     inputLabel.classList.remove("text-base");
     inputLabel.classList.add("text-[12px]");
@@ -47,13 +44,30 @@ document.addEventListener("DOMContentLoaded", () => {
     warning2.classList.add("hidden");
     warning1.classList.remove("flex");
     warning1.classList.add("hidden");
+    numberButton.classList.remove("border-white", "border-solid", "border-2");
+
+    inputEmail.addEventListener("input", () => {
+      const values = inputEmail.value;
+      if (validator.isNumeric(values)) {
+        number.classList.remove("hidden");
+        number.classList.add("flex");
+        numberButton.classList.remove("hidden");
+        numberButton.classList.add("flex");
+      } else if (!validator.isNumeric(values)) {
+        number.classList.remove("flex");
+        number.classList.add("hidden");
+        numberButton.classList.remove("flex");
+        numberButton.classList.add("hidden");
+      }
+    });
 
     document.addEventListener("click", (event) => {
       if (
         !borderClicked.contains(event.target) &&
         !inputEmail.contains(event.target) &&
         !passwordClicked.contains(event.target) &&
-        !password.contains(event.target)
+        !password.contains(event.target) &&
+        !number.contains(event.target)
       ) {
         borderClicked.classList.remove(
           "outline-2",
@@ -64,21 +78,38 @@ document.addEventListener("DOMContentLoaded", () => {
         inputEmail.classList.add("hidden");
         inputLabel.classList.remove("text-[12px]");
         inputLabel.classList.add("text-base");
+        numberButton.classList.remove(
+          "border-white",
+          "border-solid",
+          "border-2"
+        );
         if (inputEmail.value === "") {
           warning1.classList.remove("hidden");
           warning1.classList.add("flex");
           warning2.classList.remove("flex");
           warning2.classList.add("hidden");
+          warning4.classList.remove("flex");
+          warning4.classList.add("hidden");
+          number.classList.remove("flex");
           number.classList.add("hidden");
+          numberButton.classList.remove("flex");
+          numberButton.classList.add("hidden");
         } else if (inputEmail.value !== "") {
           warning2.classList.remove("flex");
           warning2.classList.add("hidden");
           inputEmail.classList.remove("hidden");
           inputLabel.classList.remove("text-base");
           inputLabel.classList.add("text-[12px]");
-          if (!validator.isEmail(inputEmail.value)) {
+          if (validator.isNumeric(inputEmail.value)) {
             warning1.classList.remove("flex");
             warning1.classList.add("hidden");
+            warning4.classList.remove("hidden");
+            warning4.classList.add("flex");
+          } else if (!validator.isEmail(inputEmail.value)) {
+            warning1.classList.remove("flex");
+            warning1.classList.add("hidden");
+            warning4.classList.remove("flex");
+            warning4.classList.add("hidden");
             warning2.classList.remove("hidden");
             warning2.classList.add("flex");
           }
@@ -87,22 +118,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  passwordClicked.addEventListener("click", () => {
+  number.addEventListener("click", (event) => {
     event.preventDefault();
-    const eyeOn = new Image();
-    eyeOn.src = "/assets/eye.svg";
-    const eyeOff = new Image();
-    eyeOff.src = "/assets/eye-off.svg";
-    showPassword.addEventListener("click", () => {
-      if (eyeImg.src.endsWith("/assets/eye.svg")) {
-        eyeImg.src = eyeOff.src;
-        password.type = "password";
-      } else {
-        eyeImg.src = eyeOn.src;
-        password.type = "text";
-      }
-    });
+    event.stopPropagation();
+    numberButton.classList.add("border-white", "border-solid", "border-2");
+    borderClicked.classList.remove(
+      "outline-2",
+      "outline-fff",
+      "outline",
+      "outline-offset-2"
+    );
+  });
+
+  opsi.forEach((option) => {
+    const text = option.textContent;
+    option.classList.add("text-black");
+
+    const match = text.match(/\+\d+/);
+
+    if (match) {
+      option.setAttribute("dataCN", match[0]);
+    }
+  });
+
+  selectValued.textContent = select.options[0].value;
+  countryNumber.textContent = select.options[0].getAttribute("dataCN");
+  select.addEventListener("change", () => {
+    const selected = select.value;
+    const selectCN =
+      select.options[select.selectedIndex].getAttribute("dataCN");
+    selectValued.textContent = selected;
+    countryNumber.textContent = selectCN;
+  });
+
+  passwordClicked.addEventListener("click", (event) => {
     passwordClicked.classList.add(
       "outline-2",
       "outline-fff",
@@ -116,6 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
     passwordLabel.classList.remove("text-base");
     passwordLabel.classList.add("text-[12px]");
     passwordLabel.classList.add("font-medium");
+    passwordLabel.classList.add("items-center");
+    warning3.classList.remove("flex");
+    warning3.classList.add("hidden");
     document.addEventListener("click", (event) => {
       if (!passwordClicked.contains(event.target)) {
         passwordClicked.classList.remove(
@@ -126,28 +178,54 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         showPassword.classList.remove("flex");
         showPassword.classList.add("hidden");
-        if (password.value === "") {
+        if (password.value == "") {
           warning3.classList.remove("hidden");
           warning3.classList.add("flex");
           passwordLabel.classList.remove("text-[12px]");
           passwordLabel.classList.add("text-base");
+          password.classList.remove("flex");
+          password.classList.add("hidden");
+        } else if (password.value.length <= 4) {
+          warning3.classList.remove("hidden");
+          warning3.classList.add("flex");
         }
       }
     });
   });
 
-
-  remember.addEventListener("click",()=>{
-    if(remember.classList.contains("bg-white")){
-      remember.classList.remove("bg-white")
-      remember.classList.add("bg-black")
-      remember.classList.remove("hover:bg-[#BCB7B5]")
-      remember.classList.add("border","hover:border-white","border-[#5A5A5A]")
-    }else{
-      remember.classList.remove("bg-black")
-      remember.classList.add("bg-white")
-      remember.classList.add("hover:bg-[#BCB7B5]")
-      remember.classList.remove("hover:border","hover:border-white")
+  showPassword.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (eyeImg.src.endsWith("/assets/eye.svg")) {
+      eyeImg.src = "/assets/eye-off.svg";
+      password.type = "password";
+      console.log("success");
+    } else {
+      eyeImg.src = "/assets/eye.svg";
+      password.type = "text";
     }
-  })
+  });
+
+  remember.addEventListener("click", () => {
+    if (remember.classList.contains("bg-white")) {
+      remember.classList.remove("bg-white");
+      remember.classList.add("bg-black");
+      remember.classList.remove("hover:bg-[#BCB7B5]");
+      remember.classList.add(
+        "border",
+        "hover:border-white",
+        "border-[#5A5A5A]"
+      );
+    } else {
+      remember.classList.remove("bg-black");
+      remember.classList.add("bg-white");
+      remember.classList.add("hover:bg-[#BCB7B5]");
+      remember.classList.remove("hover:border", "hover:border-white");
+    }
+  });
+
+  lang.textContent = langChoose.options[0].textContent;
+  langChoose.addEventListener("change", () => {
+    lang.textContent = langChoose.options[langChoose.selectedIndex].textContent;
+  });
 });
