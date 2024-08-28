@@ -13,9 +13,9 @@ module.exports = {
         'border' : '#EB3942',
       },
       screens:{
-        'xs' : {'max':'600px'},
-        'lgmax' : {'max' : '960px'},
-        '2xmax' : {'max' : '1536px','min' : '600px'},
+        'xs' : {'max':'600px','min' : '0px'},
+        'lgmax' : {'max' : '960px','min':'601px'},
+        '2xmax' : {'max' : '1536px'},
         'xlmax' : {'max' : '1280px'}
       }
     },
