@@ -16,7 +16,7 @@ module.exports = {
         'xs' : {'max':'600px','min' : '0px'},
         'lgmax' : {'max' : '960px','min':'601px'},
         '2xmax' : {'max' : '1536px'},
-        'xlmax' : {'max' : '1280px'}
+        'xlmax' : {'max' : '1280px' , 'min':'961px'}
       }
     },
   },
